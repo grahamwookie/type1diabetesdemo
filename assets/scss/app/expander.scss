@@ -1,0 +1,158 @@
+@import "../nhsuk/environment/settings/colours";
+
+.expander {
+	display: block;
+	background-color: $white;
+	.expander__list {
+		list-style: none;
+		padding-left: 0;
+	}
+	li + li {
+		margin: 0;
+		border-top: 1.5px;
+	}
+
+}
+
+$border-width: 4px;
+
+.expander__item {
+	border: $border-width solid $nhs-blue;
+	display: block;
+	line-height: 75px;
+	margin-bottom: 0;
+}
+
+$arrow-margin: 18px;
+$arrow-width:  32px;
+$text-margin-left: $arrow-width + (2 * $arrow-margin);
+
+.expander__item__title {
+	color: $dark-blue;
+	font-size: 19px;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	background-image: url('/images/expander/icon-expander-open.svg');
+	background-repeat: no-repeat;
+	background-position: $arrow-margin 22px;
+	padding-right: 8px;
+	padding-left: $text-margin-left;
+	&:link, &:visited, &:active {
+		color: $dark-blue;
+	}
+
+	&:focus {
+		outline-width: $border-width;
+	}
+}
+
+.expander__item__title--open {
+	background-image: url('/images/expander/icon-expander-close.svg');
+}
+
+.expander__item__title__arrow {
+	margin: 0 28px 0 28px;
+}
+
+.expander__item__title:hover {
+	color: $dark-blue;
+	background-color: #EEF7FF;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+
+.expander__item__content {
+	display: none;
+	margin: $border-width 0 0 0; /** need to add top margin to account for title outline **/
+	font-size: 19px;
+	line-height: 28px;
+
+	.expander__item__content__text {
+		margin: 18px $text-margin-left;
+		ul {
+			margin-top: 0;
+			margin-bottom: 18px;
+		}
+		li {
+			list-style: disc;
+			padding: 8px 0;
+		}
+	}
+
+	li {
+		font-size: 19px;
+		line-height: 28px;
+	}
+}
+.expander__item__content__text .list--check li, .expander__item__content__text .list--cross li {
+	list-style: none;
+}
+.expander__item__content__text .panel {
+	margin-bottom: 32px;
+}
+@media (min-width: 925px) {
+	.expander__item__content__text p {
+		font-size: 19px;
+		line-height: 28px;
+		margin-bottom: 18px;
+	}
+
+	.expander__item__content__text *+* {
+		margin-top: 24px;
+	}
+}
+
+.expander__item__content--open {
+	display: block;
+}
+
+.expander__item__content__video {
+	display: block;
+	width: 100%;
+	height: 353px;
+}
+
+.expander__item__content__video-container {
+	position: relative;
+}
+
+
+$video-overlay-height: 50px;
+
+.expander__item__content__video-overlay {
+	color: white;
+	position: absolute;
+	background: $blue;
+	opacity: 0.7;
+	height: $video-overlay-height;
+	line-height: $video-overlay-height;
+	padding-left: 12px;
+	margin: 0;
+	width: 100%;
+	bottom: 0;
+}
+
+.expander__item__button-wrapper {
+	margin-bottom: 32px;
+}
+
+.expander__item__button--close {
+	background-color: $white;
+	border: solid 2px $dark-blue;
+	color: $dark-blue;
+	padding: 10px 1.2em;
+	text-align: center;
+	display: block;
+	font-size: 19px;
+	border-radius: 11px;
+	margin: 0 auto;
+}
+
+.expander__item__button--close:hover {
+	background-color: $white;
+	border: solid 2px #231F20;
+	text-decoration: underline;
+	cursor: pointer;
+}

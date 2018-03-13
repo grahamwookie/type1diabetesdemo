@@ -1,0 +1,56 @@
+@import "../nhsuk/environment/tools/mixins/layout";
+@import "../nhsuk/environment/settings/colours";
+
+footer {
+	background-color: $blue;
+}
+.global-footer {
+	background-color: $white;
+}
+
+.global-footer__container {
+	@include site-width-container;
+	margin: 32px 0;
+}
+
+.global-footer__links {
+
+	ul {
+		list-style: none;
+		padding: 0;
+		color: blue;
+		font-size: 16px;
+		li a {
+			color: $white;
+		}
+	}
+}
+
+.global-footer__logo {
+	background-color: $blue;
+	height: 72px;
+}
+
+.global-footer__inner {
+	padding: 0;
+	height: 100%;
+	border-bottom-width: 4px;
+}
+
+.global-footer__inner:before {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	background-image: url('/images/nhs-white-box-logo.svg');
+}
+
+
+@media (min-width: 1024px) {
+	.global-footer__container {
+		margin: 32px auto;
+	}
+}
+
+footer {
+	border-top: 1px solid $grey-2;
+}

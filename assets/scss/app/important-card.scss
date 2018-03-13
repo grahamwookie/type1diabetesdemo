@@ -1,0 +1,44 @@
+@import "../nhsuk/environment/settings/colours";
+
+.important-card {
+	position: relative;
+	background-color: $white;
+	border-top: 2px solid $dark-blue;
+	padding: 25px 14px 25px 14px;
+	margin-bottom: 32px;
+
+	p {
+		font-size: 19px;
+		line-height: 28px;
+		margin-top: 4px;
+		margin-bottom: 0;
+	}
+
+	.important-card__icon {
+		color: $white;
+		background-color: $blue;
+		position: absolute;
+		width: 32px;
+		height: 32px;
+		left: 0px;
+		top: -16px;
+		text-align: center;
+		font-size: 28px;
+		font-weight: bold;
+		&:after {
+			content: "!";
+			line-height: 32px;
+		}
+	}
+}
+.important-card--yellow {
+	background-color: #FFF490;
+	border-top: 2px solid #000;
+	font-size: 19px;
+	line-height: 28px;
+	padding:24px;
+
+	.important-card__icon {
+		background-color: #000;
+	}
+}

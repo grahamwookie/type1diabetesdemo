@@ -1,0 +1,21 @@
+.external-links {
+	margin-top: 4px;
+
+	a.external-links__link-arrow {
+		display: block;
+		background-image: url('/images/icon-link-arrow-right.svg');
+		background-position: 0 9px;
+		background-repeat: no-repeat;
+		padding-left: 32px;
+		font-size: 19px;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+}
+.external-links ul li p {
+	padding-left: 32px;
+	font-size: 16px;
+}

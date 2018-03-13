@@ -1,0 +1,108 @@
+@import "../nhsuk/environment/tools/mixins/layout";
+@import "../nhsuk/environment/settings/colours";
+
+
+$header-height: 100px;
+
+.global-header {
+	background-color: $nhs-blue;
+	height: $header-height;
+}
+
+.global-header__inner {
+	border-bottom: 4px solid $dark-blue;
+	display: block;
+	padding: 0;
+	height: $header-height;
+}
+
+.global-header__link-container {
+	display: inline-block;
+	height: 100%;
+	width: 20%;
+	float: left;
+	position: relative;
+}
+
+.global-header__link {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	background-image: url('/images/nhs-white-box-logo.svg');
+}
+
+.global-header__navigation {
+	display: inline-block;
+	height: 100%;
+	text-align: right;
+	width: 80%;
+
+	a, a:link {
+		color: $white;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: #d4efff;
+	}
+
+	ul {
+		list-style: none;
+		li {
+			display: inline;
+			font-size: 16px;
+			line-height: $header-height;
+		}
+
+		li + li {
+			padding-left: 32px;
+		}
+
+	}
+}
+
+$height: 64px;
+
+.breadcrumb {
+
+}
+
+.breadcrumb__navigation {
+	@include site-width-container;
+	line-height: $height;
+	color: $dark-blue;
+	list-style: none;
+	padding: 28px 0;
+
+	ol {
+		padding-left: 0;
+	font-size: 16px;
+	}
+
+	li {
+		display: inline;
+	}
+
+	a {
+		color: $dark-blue;
+	}
+	a:hover {
+		color: #005eb8;
+	}
+
+	a:focus {
+		background-color: $focus-colour;
+	}
+
+	a:active {
+		color: $dark-blue;
+		text-decoration: none;
+		background: none;
+		outline: none;
+	}
+
+	.right-arrow {
+		margin: 0 24px;
+	}
+
+}
